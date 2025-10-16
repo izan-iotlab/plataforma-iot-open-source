@@ -1,0 +1,68 @@
+# General
+/.env
+/.env.*
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+.DS_Store
+.idea/
+.vscode/
+
+# Docker
+**/docker-compose.override.yml
+**/.docker
+**/.dockerignore
+
+# Logs and runtime files
+airflow/logs/
+**/logs/
+**/log/
+
+# Airflow
+airflow/airflow.cfg
+airflow/unittests.cfg
+airflow/webserver_config.py
+airflow/config/*.cfg
+airflow/.env
+airflow/.airflowignore
+
+# Neo4j data and logs
+neo4j/neo4j/data/
+neo4j/neo4j/logs/
+neo4j/neo4j/import/
+neo4j/neo4j/plugins/
+neo4j/neo4j/dbms/auth.ini
+
+# Mosquitto / MQTT data
+datos-plataforma/mosquitto/data/
+datos-plataforma/mosquitto/log/
+
+# Large or generated files
+**/data/
+**/*.db
+**/*.sqlite
+
+# Build artifacts, node_modules, caches
+node_modules/
+dist/
+build/
+
+# Secret files
+secrets.json
+credentials.yml
+
+# Temporary editor files
+*~
+*.swp
+
+# Ignore docker volumes/state files that may exist
+**/volumes/
+
+# Ignore compiled templates, caches
+*/__pycache__/
+
+# Keep a template env file (not the real one)
+!.env.example
+!airflow/.env.example
